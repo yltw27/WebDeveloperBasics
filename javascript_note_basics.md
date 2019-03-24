@@ -1,12 +1,11 @@
 # JavaScript Note - Basics
 
-#### Introduction to JavaScript
+
+### Introduction to JavaScript
 Todo
 
 
-### Basics
-
-##### 5 primitive types
+### 5 primitive types
 1. Numbers
  
         //取商數 (ans=9)
@@ -37,7 +36,7 @@ Todo
         //Variables are declared but not initialized are undefined
         var age;
 
-##### Vairables
+### Vairables
     //variables are simply containers that store values
     //they follow this pattern:
     var varName = varValue;
@@ -45,7 +44,7 @@ Todo
     //Do use camelCase for naming
     var englishLetter = "a";
     
-##### Some useful built-in methods
+### Some useful built-in methods
     //Clear the screen
     clear()
     
@@ -56,36 +55,56 @@ Todo
     console.log()
     
  
- ### Control Flows
+### Control Flows
  
- ##### Boolean Logic
- * Comparison operators
-     * === means "equal value and type"
-     * !== means "not equal value or type"
+##### Boolean Logic
+* Comparison operators
+    * === means "equal value and type"
+    * !== means "not equal value or type"
      
-           // == v.s. ===
-           // == performs type coercion while === doesn't
-           var x = 99;
-           x == "99"  //true
-           x === "99"  //false
+            // == v.s. ===
+            // == performs type coercion while === doesn't
+            var x = 99;
+            x == "99"  //true
+            x === "99"  //false
+
+            var y = null;
+            y == undefined  //true
+            y === undefined  //false
            
-           var y = null;
-           y == undefined  //true
-           y === undefined  //false
-           
-           true == "1"  //true
-           0 == false  //true
-           NaN == NaN  //false!  // Not a Number
+            true == "1"  //true
+            0 == false  //true
+            NaN == NaN  //false!  // Not a Number
            
 * Logical operators
     * && (and), || (or), ! (not)
 
 * Truthy and falsy values
 
-      //Falsy values (Everything else is truthy)
-      false
-      0
-      ""
-      null
-      undefined
-      Nan
+        //Falsy values (Everything else is truthy)
+        false
+        0
+        ""
+        null
+        undefined
+        Nan
+
+##### Conditionals
+* if, else if, else
+
+        if(age < 18){
+            console.log("Sorry! You cannot get in.")
+        }else if(age >= 18 && age < 21){
+            console.log("You can enter, but cannot drink.")
+        }else{
+            console.log("Welcome!")
+        }
+
+* while loops
+      
+        var count = 0;
+        while(count < 10){
+            console.log("count is: " + count);
+            count++;
+        }
+

@@ -1,10 +1,24 @@
-<h2>The Web Developer Bootcamp</h2>
-
-Udemy course for beginners
-https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview
+<h2>Becoming a Web Developer</h2>
 
 
-<h4>Skills</h4>
+### Backend basics
+* Udemy Full Stack Basics by Colt Steele 
+    * https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview
 
-* JavaScript
-* NodeJS
+
+### Databases
+##### SQL
+
+##### NoSQL
+
+
+### OOP
+
+
+### Data Structures and Algorithms
+
+
+### HTTP/TCP
+
+
+### System Design
