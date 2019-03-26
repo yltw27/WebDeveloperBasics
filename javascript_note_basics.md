@@ -108,3 +108,14 @@ Todo
             count++;
         }
 
+* For loops
+
+        for(init; condition; step){
+            //run some code
+        }
+
+Please remember to use **i+=n** for step
+  
+      for(var i=0; i<10; i+=2){
+          console.log(i);
+      }
