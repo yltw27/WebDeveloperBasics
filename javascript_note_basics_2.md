@@ -92,6 +92,11 @@
         var subFruits = fruits.slice(1, 3); //"banana", "lemon"
         var sameFruits = fruits.slice(); //copy the entire array
 
+    * splice
+
+        todo.splice(index, number); 
+        //number means how many items you want to delete from index
+
 * Array Iteration
     * for
 
@@ -111,3 +116,18 @@
             console.log("Todo task: "+todo);
         }
         todos.forEach(printTodo);
+
+        //build a forEach
+        function myForEach(arr, func) {
+            //call the func and apply on every element in the arr
+            for(var i = 0; i < arr.length; i++) {
+                func(arr[i]);
+            }
+        };
+        //then try
+        var colors = ["red", "green", "blue"];
+        myForEach(colors, alert);
+        //functions won't work without a () behind it
+
+
+### Objects
