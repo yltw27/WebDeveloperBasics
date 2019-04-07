@@ -131,3 +131,31 @@
 
 
 ### Objects
+* Define (using {})
+
+        //store data in key-value pairs
+        //unlike arrays, objects have no order
+        var person = {
+            name: "Tom",
+            age: 30,
+            city: "NY"
+        };
+        //An array is a special version of an object
+
+        //You can also create an empty object aand then add properties to it
+        var person = {};
+
+        //Retrieve by keys
+        person["name"];
+
+        //Retrieve by dot notation
+        person.name;
+        //dot notation cannot be used when the property starts with a number, with spaces
+        //it cannot use a variable either
+        var str = "name";
+        person.str //doesn't look for "name"
+        person[str] //evaluate str and look for name
+
+        //Update data
+        person.city = "London";
+        person.age += 1;
