@@ -159,3 +159,19 @@
         //Update data
         person.city = "London";
         person.age += 1;
+
+* Add methods to objects
+
+        var obj = {
+            name: "Chuck",
+            age: 18,
+            friends: ["Monica", "Joe"],
+            addFriends: function(newFriend){
+                this.friends.push(newFriend);
+            },
+            showFriends: function(newFriend){
+                this.friends.forEach(function(f){
+                    console.log(f);
+                })
+            }
+        }
