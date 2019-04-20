@@ -1,9 +1,11 @@
 # The DOM : Document Object Model
 
+
 * Define
     * The DOM is the interface between JS and HTML+CSS
     * The browser turns every HTML tags into a javascript object that we can manipulate.
     * Everything is stored inside of the **document** object
+
 
 * Process
     * Select and manipulate
@@ -67,10 +69,44 @@
         tag.classList.remove("some-class");
         tag.classList.toggle("some-class");  // add/remove the class
 
-        * textContent: returns a string of all the text contained in a given element
+        * textContent/innerHTML: returns a string of all the text contained in a given element
 
         tag.textContent;
         tag.textContent = "override the content";
-
-        * innerHTML
         tag.innerHTML;
+
+        * Attributes
+
+        var link = document.querySelector("a");
+        link.getAttribute("src");
+        link.setAttribute("src", "..."); 
+
+
+* Events
+    * Process: Select an element and add a event listener to it
+
+        element.addEventListener(type, functionToCall);
+
+        //set up click listener
+        h1.addEventListener("click", function(){
+            h1.style.background = "yellow";
+        })
+        //You could add more than 1 event listener
+
+    * More types of events
+        * https://developer.mozilla.org/en-US/docs/Web/Events
+        * mouseover, mouseout
+
+            title.addEventListener("mouseover", function(){
+                title.style.background = "yellow";
+            })
+            title.addEventListener("mouseout", function(){
+                title.style.background = "white";
+            }
+
+            //tips: use for loop for list style toggle
+            for(var i=0; i<lis.length; i++) {
+                lis[i].addEventListener("mouseover", function(){
+                    this.classList.add("mouseon");
+                })
+            }
