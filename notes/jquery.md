@@ -107,3 +107,34 @@
         $("h1").on("click", function(){
             $(this).css("color", "red");
         })
+
+        $("button").on("mouseenter", function(){
+            $(this).css("fontWeight", "bold");
+        })
+        $("button").on("mouseleave", function(){
+            $(this).css("fontWeight", "normal");
+        })
+
+    * .click() only adds listeners for existing elements, but .on() will add listeners for **all potential future elements**.
+
+
+* jQuery effects
+
+    * fading: fadeOut(), fadeIn(), fadeToggle()
+
+        //The elements won't be remove from html, but display has been set to none. 
+        $("button").on("click", function(){
+            $("div").fadeToggle(1000);
+        })
+        
+        $("button").on("click", function(){
+            $("div").fadeOut(1000, function(){
+                $(this).remove();
+            })
+        })
+
+    * sliding: sildeUp(), sildeDown(), sildeToggle()
+
+        $("button").on("click", function(){
+            $("div").slideToggle();
+        })
