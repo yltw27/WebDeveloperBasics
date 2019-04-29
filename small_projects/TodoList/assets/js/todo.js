@@ -16,7 +16,12 @@ $("ul").on("click", "span", function(event){
 //Add new todos from input
 $("input[type='text']").on("keypress", function(event){
     if(event.which == 13){
-        $("ul").append("<li><span>X</span> "+$(this).val()+"</li>");
+        $("ul").append("<li><span><i class='fas fa-trash-alt'></i></span> "+$(this).val()+"</li>");
         $(this).val(""); //clear the input text
     }
+});
+
+//Make the input box fadeIn/FadeOut once click it
+$(".fa-plus").click(function(){
+    $("input[type='text']").fadeToggle();
 });
