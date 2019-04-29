@@ -22,3 +22,9 @@
 
 
 ### System Design
+
+
+###Useful websites for frontend design
+* Gradient background color https://uigradients.com/
+* Google fonts https://fonts.google.com/
+* Various icons https://fontawesome.com/
