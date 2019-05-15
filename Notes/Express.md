@@ -46,3 +46,25 @@ app.listen(3000, function(){
 
     * Automate Node server restart with Nodemon (Don't use for production)
         ```sudo npm i -g nodemon```
+
+#### Routes
+* Order of routes matter!
+```
+//Put * route to the bottom to avoid overwrite other routes.
+//Express will check routes by the order in app.js.
+
+app.get("*", function(req, res){
+    res.send("You are a star ;)");
+})
+```
+
+* Route parameters
+    * To avoid WET (Write everything twice)
+    * Use **:** to represent any single thing following it
+    * Use **req.params** to get parameters
+    ```
+    app.get("/r/:subRedditName", function(req, res) {
+        var subreddit = req.params.subRedditName.toUpperCase();
+        res.send("Welcome to the " + subreddit + " subreddit!");
+    });
+    ```

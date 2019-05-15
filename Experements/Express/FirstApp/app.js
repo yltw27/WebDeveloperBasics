@@ -19,6 +19,20 @@ app.get("/cat", function(req, res){
     console.log("Someone send GET to /cat");
 })
 
+app.get("/r/:subRedditName", function(req, res) {
+    var subreddit = req.params.subRedditName.toUpperCase();
+    res.send("Welcome to the " + subreddit + " subreddit!");
+});
+
+app.get("/r/:subRedditName/comments/:id/:title/", function(req, res) {
+    console.log(req.params);
+    res.send("Welcome to the comment page!");
+});
+
+app.get("*", function(req, res){
+    res.send("You are a star ;)");
+})
+
 //Tell Express to listen for requests (start server)
 // process.env.PORT is undefined?
 // app.listen(process.env.PORT, process.env.IP, function(){
