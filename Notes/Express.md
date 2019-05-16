@@ -17,33 +17,33 @@
 npm install express --save
 ```
 
+
 ### app.js [link](../Experiments/Express/FirstApp)
 * After `npm init` and `npm install express --save`, you need to set routes and listeners in app.js (or index.js).
 
-```
-var express = require("express");
-var app = express();
+    ```
+    var express = require("express");
+    var app = express();
 
-// "/" -> "Hi there!"
-//req: request, res: response (both are objects)
-app.get("/", function(req, res){
-    res.send("Hi there!");
-})
+    // "/" -> "Hi there!"
+    //req: request, res: response (both are objects)
+    app.get("/", function(req, res){
+        res.send("Hi there!");
+    })
 
-// "/bye" -> "Goodbye!"
-app.get("/bye", function(req, res){
-    res.send("Goodbye!");
-})  
+    // "/bye" -> "Goodbye!"
+    app.get("/bye", function(req, res){
+        res.send("Goodbye!");
+    })  
 
-//Tell Express to listen for requests (start server)
-app.listen(3000, function(){
-    console.log("Server has started!");
-});
-```
+    //Tell Express to listen for requests (start server)
+    app.listen(3000, function(){
+        console.log("Server has started!");
+    });
+    ```
 
 * Start server
 `node app.js`
-
     * Automate Node server restart with Nodemon (Don't use for production)
         ```sudo npm i -g nodemon```
 
@@ -68,3 +68,30 @@ app.get("*", function(req, res){
         res.send("Welcome to the " + subreddit + " subreddit!");
     });
     ```
+
+
+### EJS
+* Use res.render() and EJS to send back html
+    * Put EJS files under views/
+    * install ejs using npm
+    ```
+    app.get("/", function(req, res) {
+        res.render("home.ejs");  //Will look for home.ejs under views/
+    });
+    ```
+
+* Use `<%= %>` in html to produce JS result
+    * Things in `<%= %>` means JS code
+    ```
+    <h1>You fall in love with "<%= thingVar %>"</h1>
+
+    //In app.js, use {} to send variables
+    app.get("/fallinlivewith/:thing", function(req, res) {
+        var thing = req.params.thing;
+        res.render("love.ejs", {thingVar: thing});
+    });
+    ```
+
+* JS code block
+    1. <%= %> Directly add the result to html
+    2. <% %> Run the code but don't add it to html
