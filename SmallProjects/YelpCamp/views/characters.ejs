@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<h1>Characters</h1>
+
+<% characters.forEach(function(c){ %>
+    <div>
+        <h4><%= c.name %></h4>
+        <img src="<%= c.image %>">
+    </div>
+<% }); %>
+
+<a href="/">BACK</a>
+<% include partials/footer %>
