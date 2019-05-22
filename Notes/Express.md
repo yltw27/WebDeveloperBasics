@@ -11,12 +11,15 @@
         e.g. Express is a light-weight framework. (You need to do more.)
              Rails, on the contrary, is a heavy-weight framework.
 
-* Install Express
-
-```bash
-npm install express --save
-```
-
+* Steps to start the server
+    1. Create a directory `mkdir dirname`
+    2. `npm init` and change the entry point to app.js
+    3. Create app.js (Set routes and listener) and views/ if EJS is needed
+    4. Install Node packages by NPM 
+        ```
+        npm install express --save
+        npm install ejs --save
+        ```
 
 ### app.js [link](../Experiments/Express/FirstApp)
 * After `npm init` and `npm install express --save`, you need to set routes and listeners in app.js (or index.js).
@@ -24,6 +27,8 @@ npm install express --save
     ```
     var express = require("express");
     var app = express();
+
+    app.set("view engine", "ejs");
 
     // "/" -> "Hi there!"
     //req: request, res: response (both are objects)
@@ -47,7 +52,7 @@ npm install express --save
     * Automate Node server restart with Nodemon (Don't use for production)
         ```sudo npm i -g nodemon```
 
-#### Routes
+##### Routes
 * Order of routes matter!
 ```
 //Put * route to the bottom to avoid overwrite other routes.
@@ -70,10 +75,10 @@ app.get("*", function(req, res){
     ```
 
 
-### EJS
+### EJS, Embedded JavaScript templates
 * Use res.render() and EJS to send back html
     * Put EJS files under views/
-    * install ejs using npm
+    * install ejs using npm `npm i ejs --save`
     ```
     app.get("/", function(req, res) {
         res.render("home.ejs");  //Will look for home.ejs under views/
@@ -95,3 +100,11 @@ app.get("*", function(req, res){
 * JS code block
     1. <%= %> Directly add the result to html
     2. <% %> Run the code but don't add it to html
+
+
+* body-parser
+```
+//app.js
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencode({extended: true}));
+```
