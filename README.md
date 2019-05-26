@@ -3,6 +3,9 @@
 Based on Udemy course: The Web Developer Bootcamp by Colt Steele 
 [https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/overview)
 
+Small projects:
+* [Color Game](SmallProjects/ColorGame)
+* [Todo List]()
 
 ### Useful websites for frontend design
 * Gradient background color [https://uigradients.com/](https://uigradients.com/)
