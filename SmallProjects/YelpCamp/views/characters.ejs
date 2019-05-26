@@ -1,13 +1,25 @@
 <% include partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <div>
+            <h1>Welcome to characters page</h1>
+            <p>View the most popular characters from all over the world!</p>
+            <p>
+                <a class="btn btn-primary btn-large" href="/characters/new">Add New Characters</a>
+                <a class="btn btn-primary btn-large" href="/">BACK</a>
+            </p>
+        </div>
+    </header>
 
-<h1>Characters</h1>
-
-<% characters.forEach(function(c){ %>
-    <div>
-        <h4><%= c.name %></h4>
-        <img src="<%= c.image %>">
+    <div class="row" style="display:flex; flex-wrap:wrap;">
+        <% characters.forEach(function(c){ %>
+            <div class="col-md-6 col-sm-10">
+                <div class="thumbnail">
+                    <img src="<%= c.image %>">
+                    <div class="caption"><%= c.name %></div>
+                </div>
+            </div>
+        <% }); %>
     </div>
-<% }); %>
-
-<a href="/">BACK</a>
+</div>
 <% include partials/footer %>

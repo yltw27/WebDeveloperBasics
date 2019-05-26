@@ -10,6 +10,10 @@ var characters = [
     {name: "Harry Potter", image: "https://farm8.staticflickr.com/7221/7305191686_25ca074567.jpg"},
     {name: "Jon Snow", image: "https://farm9.staticflickr.com/8387/8565678298_644a2142b6.jpg"},
     {name: "Rachel Green", image: "https://farm4.staticflickr.com/3675/10737623623_3b51721db6.jpg"},
+    {name: "Peter Parker", image: "https://farm2.staticflickr.com/1859/44497125802_06c28bbbda.jpg"},
+    {name: "Peter Parker", image: "https://farm2.staticflickr.com/1859/44497125802_06c28bbbda.jpg"},
+    {name: "Peter Parker", image: "https://farm2.staticflickr.com/1859/44497125802_06c28bbbda.jpg"},
+    {name: "Peter Parker", image: "https://farm2.staticflickr.com/1859/44497125802_06c28bbbda.jpg"}
 ];
 
 app.get("/", function(req, res){

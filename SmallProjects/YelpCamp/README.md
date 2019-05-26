@@ -9,6 +9,8 @@
 3. Set up header and footer
 4. Install Bootstrap
 5. Add a feature for user to submit a new character
+6. Add a better header/title
+7. Make campgrounds display in a grid
 
 
 ### Resoruces
