@@ -101,6 +101,32 @@ app.get("*", function(req, res){
     1. <%= %> Directly add the result to html
     2. <% %> Run the code but don't add it to html
 
+* Styling
+    * CSS stylesheets should be put under public/
+    * and include in the JS files by: `<link rel="stylesheet" href="name.css">`
+    * and add the following lines to to app.js
+    ```
+    app.use(express.static("public"));
+    app.set("view engine", "ejs");
+    ```
+
+* Header and footer
+    * To skip writing headers and footers everytime, create header.ejs and footer.ejs under views/partials/
+    * header.ejs
+    ```
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="/sylesheets/app.css">
+            <script scr="/scripts/main.js">
+        </head>
+        <body>
+    ```
+    * footer.ejs
+    ```
+        </body>
+    </html>
+    ```
 
 * body-parser
 ```
